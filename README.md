@@ -1,4 +1,4 @@
-# ticketDraft
+# draft-tickets
 A web app to draft game tickets amongst a group sharing season tickets to sporting events.
 
 
@@ -52,7 +52,7 @@ https://documenter.getpostman.com/view/13129407/TW6tKVDm#auth-info-d671fae6-7e1a
 
 
 ## Wireframes (layout sketches)
-![](Wireframe_Sketches.png)
+![](public/Wireframe_Sketches.png)
 
 
 ## Future Features
@@ -116,3 +116,4 @@ https://trello.com/b/g5bLMfQS/kraken-draft-agile-board
 - [getKraken Repo](https://github.com/getKraken)
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
+- [https://iconifier.net/](https://iconifier.net/)
