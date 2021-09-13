@@ -1,0 +1,25 @@
+.stripecont {
+  min-height: 50px;
+  display: grid;
+  grid-template-rows: 40% 20% 10% 20%;
+}
+
+.lightblue {
+  grid-row: 1 / 1;
+  background-color: #99d9d9;
+}
+
+.medblue {
+  grid-row: 2 / 2;
+  background-color: #68a2b9;
+}
+
+.darkestblue {
+  grid-row: 3 / 3;
+  background-color: 	#001628;
+}
+
+.red {
+  grid-row: 4 / 4;
+  background-color: #e9072b;
+}

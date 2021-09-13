@@ -3,9 +3,14 @@ import DraftProgressDisplay from '../components/DraftProgressDisplay'
 import TicketTable from '../components/TicketTable'
 import Footer from '../components/Footer'
 import HeroTitle from '../components/HeroTitle'
+import Stripe from '../components/Stripe'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+
+
+
+export default function Home(props) {
+
 
   return (
     <div className={styles.container}>
@@ -15,15 +20,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeroTitle/>
-      {/* <main className={styles.main}> */}
-        <DraftProgressDisplay/>
+      <main className={styles.main}>
+        <HeroTitle/>
+        <Stripe/>
+        <DraftProgressDisplay draft_order={props.data.draft_order}/>
         <TicketTable/>
-      {/* </main> */}
+      </main>
 
       <Footer/>
 
 
     </div>
   )
+}
+
+
+export async function getStaticProps() {
+
+  return {
+    props: {
+      data: {"draft_order": [[5, 7, 8, 6], [6, 8, 7, 5]]}
+    }
+  }
 }
