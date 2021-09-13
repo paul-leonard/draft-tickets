@@ -24,7 +24,8 @@ export default function Home(props) {
         <HeroTitle/>
         <Stripe/>
         <DraftProgressDisplay draft_order={props.data.draft_order}/>
-        <TicketTable/>
+        <Stripe/>
+        <TicketTable names={props.data.participants}/>
       </main>
 
       <Footer/>
@@ -39,7 +40,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: {"draft_order": [[5, 7, 8, 6], [6, 8, 7, 5]]}
+      data: {"draft_order": [[5, 7, 8, 6], [6, 8, 7, 5]],             "participants": [
+        5,
+        6,
+        7,
+        8
+    ]}
     }
   }
 }

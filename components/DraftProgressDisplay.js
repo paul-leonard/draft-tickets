@@ -1,16 +1,10 @@
-import styles from '../styles/Home.module.css'
-// import DraftRow from './DraftRow'
+import styles from '../styles/DraftProgressDisplay.module.css'
 
 export default function DraftProgressDisplay ({draft_order}) {
   return (
     <>
-      <p>Draft Overview Table and Current Pick Indicator Coming Soon</p>
-      <h2> The Draft Order:  {draft_order}</h2>
-
-      {/* <div className={styles.grid}>
-        <DraftRow row_order={draft_order[0]}/>
-        <DraftRow row_order={draft_order[1]}/>
-      </div> */}
+      <h2 className={styles.title}>Draft Order and Current Pick</h2>
+      {/* <h2 className={styles.title}>{draft_order}</h2> */}
 
       <div>
         <div className={styles.grid}>

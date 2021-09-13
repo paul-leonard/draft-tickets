@@ -10,6 +10,7 @@ export default function GameRow () {
       <PickCard/>
       <PickCard/>
       <PickCard/>
+      <PickCard/>
     </>
   )
 }
