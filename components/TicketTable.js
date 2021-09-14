@@ -1,7 +1,7 @@
 import styles from '../styles/TicketTable.module.css'
 import GameRow from './GameRow'
 
-export default function TicketTable ({names}) {
+export default function TicketTable ({participants}) {
   return (
     <>
       <h2 className={styles.title}>Game Ownership and Availability</h2>
@@ -12,9 +12,9 @@ export default function TicketTable ({names}) {
         <div className={styles.card}>
           <h2>Unclaimed</h2>
         </div>
-        {names.map((name, i) => (
+        {participants.map((participant, i) => (
             <div key={i} className={styles.card}>
-              <h2>{name}</h2>
+              <h2>{participant.username}</h2>
             </div>
         ))}
       </div>
