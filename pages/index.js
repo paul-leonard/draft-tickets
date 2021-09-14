@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import DraftProgressDisplay from '../components/DraftProgressDisplay'
 import TicketTable from '../components/TicketTable'
@@ -10,7 +11,6 @@ import styles from '../styles/Home.module.css'
 
 
 export default function Home(props) {
-
 
   return (
     <div className={styles.container}>
@@ -29,11 +29,11 @@ export default function Home(props) {
       </main>
 
       <Footer/>
-
-
     </div>
   )
 }
+
+
 
 
 export async function getStaticProps() {
