@@ -1,0 +1,78 @@
+.container {
+  padding: 0 0.5rem;
+}
+
+.main {
+  padding: 1rem 0;
+  background-color: #68a2b9;
+}
+
+.header_container {
+  display: grid;
+  grid-template-columns: 150px auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.logogrid {
+  grid-column: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  }
+
+.title {
+  grid-column: 2 / 2;
+  justify-self: center;
+  align-self: center;
+  margin: 25px;
+  line-height: 1.15;
+  font-size: 3rem;
+  color: #001628;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: .8rem;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001628;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.5rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

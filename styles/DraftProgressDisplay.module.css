@@ -1,0 +1,67 @@
+
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001628;
+  flex-wrap: wrap;
+  margin-top: -1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 10px;;
+}
+
+.card, .cardsturn {
+  margin: 1rem;
+  /* padding: .3rem; */
+  text-align: center;
+  vertical-align: middle ;
+  color: inherit;
+  background-color: #99d9d9;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 15%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.cardsturn {
+  border-color: #e9072b;
+  color: #e9072b;
+  border-width: 4px;
+}
+
+.card h2 {
+  font-size: .9rem;
+}
+
+.cards h4 {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.cardsturn h4 {
+  font-size: .8rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.5rem;
+  /* line-height: 1.5; */
+}
+
+.title {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
