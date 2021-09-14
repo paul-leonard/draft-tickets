@@ -8,6 +8,8 @@ export default function Footer () {
         <p>
           <a href="https://www.linkedin.com/in/paulryanleonard/">LinkedIn</a>
           |
+          <a href="https://paul-leonard.herokuapp.com/">Portfolio</a>
+          |
           <a href="https://github.com/paul-leonard">GitHub</a>
         </p>
         <p>

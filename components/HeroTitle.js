@@ -17,7 +17,7 @@ export default function HeroTitle () {
         Welcome to the Draft!  This is the page with all of the action!  See the drafting order of the current round and whose turn it is to pick a game.  Check out the full list of games, including who has selected which games and which games are still available to snag!
       </p>
       <p className={styles.description}>
-        This is a static preview of the new React with Next.js frontend I am constructing as a user interface to the backend Django RESTful API I created as part of my final group project at Code Fellows coding bootcamp.  This page is representative of what a logged-in member would see while conducting a draft of season tickets with 3 other season ticket owners.  
+        This is a preview of the new React with Next.js frontend I am constructing as a user interface to the backend Django RESTful API I created as part of my final group project at Code Fellows coding bootcamp.  This page is representative of what a logged-in member would see while conducting a draft of season tickets with 3 other season ticket owners.  
       </p>
     </>
   )
