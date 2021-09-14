@@ -8,8 +8,6 @@ import Stripe from '../components/Stripe'
 import styles from '../styles/Home.module.css'
 
 
-
-
 export default function Home(props) {
 
   return (
@@ -23,7 +21,15 @@ export default function Home(props) {
       <main className={styles.main}>
         <HeroTitle/>
         <Stripe/>
-        <DraftProgressDisplay draft_order={JSON.parse(props.draft_order).draft_order}/>
+        <DraftProgressDisplay draft_order={JSON.parse(props.draft_order).draft_order.map(row => row.map(id => {
+          let username = ""
+          props.participants.forEach((x,i) => {
+            if (id === x.id) {
+              username = x.username
+            }
+          })
+          return username
+        }))}/>
         <Stripe/>
         <TicketTable participants={props.participants}/>
       </main>
@@ -34,12 +40,9 @@ export default function Home(props) {
 }
 
 
-
-
 export async function getStaticProps() {
 
   return {
-
     props: {
         "id": 8,
         "title": "kraken-2021",
