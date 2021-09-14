@@ -7,7 +7,7 @@ export default function HeroTitle () {
     <>
       <div className={styles.header_container}>
         <div className={styles.logogrid}>
-          <Image src="/../public/medium_kraken.png" alt="kraken character image" width={150} height={150}/>
+          <Image src="/medium_kraken.png" alt="kraken character image" width={150} height={150}/>
         </div>
         <h1 className={styles.title}>
           Season Ticket Drafting Tool
