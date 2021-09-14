@@ -4,15 +4,24 @@ export default function DraftProgressDisplay ({draft_order}) {
   return (
     <>
       <h2 className={styles.title}>Draft Order and Current Pick</h2>
-      {/* <h2 className={styles.title}>{draft_order}</h2> */}
 
       <div>
+      <div className={styles.grid}>
+          <div className={styles.card}>
+            <h2>Alternating Rounds</h2>
+          </div>
+          <DraftRow row_order={[...Array(draft_order[0].length).keys()].map( num => (
+            "Pick " + (num + 1).toString()
+          ))}/>
+        </div>
+
         <div className={styles.grid}>
           <div className={styles.card}>
             <h2>Random Round:</h2>
           </div>
           <DraftRow row_order={draft_order[0]}/>
         </div>
+        
         <div className={styles.grid}>
           <div className={styles.card}>
             <h2>Snake Round:</h2>
