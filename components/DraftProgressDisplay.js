@@ -9,13 +9,13 @@ export default function DraftProgressDisplay ({draft_order}) {
       <div>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h2>Random Round</h2>
+            <h2>Random Round:</h2>
           </div>
           <DraftRow row_order={draft_order[0]}/>
         </div>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h2>Snake Round</h2>
+            <h2>Snake Round:</h2>
           </div>
           <DraftRow row_order={draft_order[1]}/>
         </div>
@@ -30,9 +30,14 @@ export function DraftRow ({row_order}) {
   return (
     <>
       {row_order.map((turn, i) => (
-       <div key={i} className={styles.card}>
-         <h4>{turn}</h4>
-       </div>
+        // if it is this square's turn
+        // <div key={i} className={styles.cardsturn}>
+        //   <h4>{turn}&aposs Turn</h4>
+        // </div>
+        // else
+        <div key={i} className={styles.card}>
+          <h4>{turn}</h4>
+        </div>
       ))}
     </>
   )

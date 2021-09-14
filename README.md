@@ -117,3 +117,4 @@ https://trello.com/b/g5bLMfQS/kraken-draft-agile-board
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [https://iconifier.net/](https://iconifier.net/)
+- Red Ticket Image by [Clker-Free-Vector-Images](https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311560) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311560)

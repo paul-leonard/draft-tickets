@@ -13,7 +13,7 @@ export default function HeroTitle () {
         </h1>
       </div>
       <p className={styles.description}>
-        Welcome to the Draft!  This is the page with all of the action!  See the  order of the current rouand  whose turn it is to pick a game.  Check out the   full list of games, including who has selectwhich games  and which games are  available to snag!
+        Welcome to the Draft!  This is the page with all of the action!  See the order of the current round and whose turn it is to pick a game.  Check out the full list of games, including who has selected which games and which games are available to snag!
       </p>
     </>
   )
