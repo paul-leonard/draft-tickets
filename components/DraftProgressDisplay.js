@@ -37,17 +37,22 @@ export default function DraftProgressDisplay ({draft_order}) {
 
 export function DraftRow ({row_order}) {
   return (
-    <>
-      {row_order.map((turn, i) => (
-        // if it is this square's turn
-        // <div key={i} className={styles.cardsturn}>
-        //   <h4>{turn}&aposs Turn</h4>
-        // </div>
-        // else
-        <div key={i} className={styles.card}>
-          <h4>{turn}</h4>
-        </div>
-      ))}
+    <>  
+      {row_order.map((turn, i) => {
+        if (i === 2) {
+          return (
+            <div key={i} className={styles.cardsturn}>
+              <h4>{turn}&apos;s Turn</h4>
+            </div>
+          )
+        } else {
+          return (
+            <div key={i} className={styles.card}>
+              <h4>{turn}</h4>
+            </div>
+          )
+        }
+      })}
     </>
   )
 }
