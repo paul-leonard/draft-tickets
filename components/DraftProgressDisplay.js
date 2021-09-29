@@ -32,12 +32,12 @@ export default function DraftProgressDisplay ({draft_order_props}) {
 
       <div>
       <div className={styles.grid}>
-          <div className={styles.card}>
-            <h2>Alternating Rounds</h2>
-          </div>
-          <DraftHeading row_order={[...Array(draft_order_names_and_pick_one.draft_order_names[0].length).keys()].map( num => (
-            "Pick " + (num + 1).toString()
-          ))}/>
+            <div className={styles.card}>
+              <h2 className={styles.underline}>Alternating Rounds</h2>
+            </div>
+            <DraftHeading row_order={[...Array(draft_order_names_and_pick_one.draft_order_names[0].length).keys()].map( num => (
+              "Pick " + (num + 1).toString()
+            ))}/>
         </div>
 
         <div className={styles.grid}>
@@ -66,7 +66,7 @@ export function DraftHeading ({row_order}) {
       {row_order.map((turn, i) => {
           return (
             <div key={i} className={styles.card}>
-              <h4>{turn}</h4>
+              <h4 className={styles.underline}>{turn}</h4>
             </div>
           )
       })}

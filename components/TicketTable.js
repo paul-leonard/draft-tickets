@@ -7,14 +7,14 @@ export default function TicketTable ({participants}) {
       <h2 className={styles.title}>Game Ownership and Availability</h2>
       <div className={styles.grid}>
         <div className={styles.gamecard}>
-          <h2>Game</h2>
+          <h2 className={styles.underline}>Game</h2>
         </div>
         <div className={styles.card}>
-          <h2>Unclaimed</h2>
+          <h2 className={styles.underline}>Unclaimed</h2>
         </div>
         {participants.map((participant, i) => (
             <div key={i} className={styles.card}>
-              <h2>{participant.username}</h2>
+              <h2 className={styles.underline}>{participant.username}</h2>
             </div>
         ))}
       </div>
