@@ -21,15 +21,9 @@ export default function Home(props) {
       <main className={styles.main}>
         <HeroTitle/>
         <Stripe/>
-        <DraftProgressDisplay draft_order={JSON.parse(props.draft_order).draft_order.map(row => row.map(id => {
-          let username = ""
-          props.participants.forEach((x,i) => {
-            if (id === x.id) {
-              username = x.username
-            }
-          })
-          return username
-        }))}/>
+
+        <DraftProgressDisplay draft_order_props={props}/>
+
         <Stripe/>
         <TicketTable participants={props.participants}/>
       </main>
@@ -44,6 +38,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+        // response format from series RESTful API call
         "id": 8,
         "title": "kraken-2021",
         "organizer": {
