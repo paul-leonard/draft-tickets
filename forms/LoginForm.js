@@ -1,7 +1,5 @@
 import React from "react";
-// import InputField from '../components/InputField';
 import SubmitButton from "../components/SubmitButton";
-import Footer from "../components/Footer";
 import Router from 'next/router';
 import axios from "axios";
 import InputField from "../components/InputField";
@@ -16,6 +14,48 @@ class LoginForm extends React.Component {
       isAuthenticated: false
     }
   }
+
+  setInputValue(property, val) {
+    val = val.trim();
+    if(val.length > 64) {
+      return;
+    }
+    this.setState({
+      [property]:val
+    })
+  }
+
+  resetForm(){
+    this.setState({
+      username:'',
+      password:'',
+      buttonDisabled:false
+    })
+  }
+
+  async doSignIn(){
+    if(!this.state.username){
+      return;
+    }
+    if(!this.state.password){
+      return;
+    }
+    this.setState({
+      buttonDisabled: true
+    })
+
+    const url = "https://get-kraken.herokuapp.com/api/v1/token/";
+
+    const response = await axios.post(url, {username:this.state.username, password: this.state.password});
+
+    console.log('log in response was: ', response.data);
+
+    localStorage.setItem('draft-access-token', response.data.access);
+    localStorage.setItem('draft-refresh-token', response.data.refresh);
+
+    Router.push('http://localhost:3000/');
+  }
+
   render() {
     return(
       <div className="signInPage">
@@ -36,7 +76,7 @@ class LoginForm extends React.Component {
         />
 
         <SubmitButton
-          text = 'Login'
+          text = 'To the Depths!'
           disabled = {this.state.buttonDisabled}
           onClick = {() => this.doSignIn()}  
         />
