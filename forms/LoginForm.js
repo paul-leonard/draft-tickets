@@ -52,8 +52,9 @@ class LoginForm extends React.Component {
 
     localStorage.setItem('draft-access-token', response.data.access);
     localStorage.setItem('draft-refresh-token', response.data.refresh);
+    localStorage.setItem('raw-response', JSON.stringify(response.data));
 
-    Router.push('http://localhost:3000/');
+    Router.push('http://localhost:3000/printresponse');
   }
 
   render() {
