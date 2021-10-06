@@ -16,5 +16,7 @@ export function BlankPickCard () {
 }
 
 export function ClaimPickCard () {
-  <a href="conditional_link_to_api_to_claim" className={styles.card}>Claim Game</a>
-}
+  return (
+    <a href="conditional_link_to_api_to_claim" className={styles.card}>Claim Game</a>
+  )
+  }

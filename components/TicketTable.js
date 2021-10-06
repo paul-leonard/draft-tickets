@@ -8,11 +8,7 @@ export default function TicketTable ({props}) {
   const fake_user_id = 5
 
   return (
-    <>
-      <p>Current pick belongs to {whose_turn} for Round {props.series.round} Pick {props.series.pick} </p>
-      <p>Draft array: {draft_array}</p>
-
-      
+    <>  
       <h2 className={styles.title}>Game Ownership and Availability</h2>
       <div className={styles.grid}>
         <div className={styles.gamecard}>

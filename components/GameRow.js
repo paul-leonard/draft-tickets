@@ -14,15 +14,12 @@ export default function GameRow ({event, index, props, whose_turn, fake_user_id}
       {event.host ? <BlankPickCard/> : <TicketPickCard/>}
       
       {props.series.participants.map((participant, i) => {
-        () => {
-          if (event.host === participant) {
+          if (event.host === participant.id) {
             return <TicketPickCard/>
-          // } else if (event.host != null && fake_user_id === participant) {
-          } else if (fake_user_id === participant) {
+          } else if (event.host === null  &&  whose_turn === fake_user_id  &&  fake_user_id === participant.id) {
             return <ClaimPickCard/>
           } else {
             return <BlankPickCard/>
-          }
         }
       })}
    
