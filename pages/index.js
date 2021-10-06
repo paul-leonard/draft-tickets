@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import HeroTitle from '../components/HeroTitle'
 import Stripe from '../components/Stripe'
 import styles from '../styles/Home.module.css'
-import { getSeriesData } from '../services/data-fetcher'
+import { getEventData, getSeriesData } from '../services/data-fetcher'
 import { withRouter } from 'next/router'
 
 
@@ -24,17 +24,31 @@ class Home extends React.Component {
         draft_order: '{"draft_order": [[5, 7, 8, 6], [6, 8, 7, 5]]}',
         round: 1,
         pick: 1,
-      }
+      },
+      events: []
+      // {
+      //   id: 0,
+      //   description: "",
+      //   host: "",
+      // }
     }
   }
 
   async componentDidMount() {
     const id = 8;
+    
     const series = await getSeriesData(id);
+    
+    const AllEvents = await getEventData();
+
+    const events = AllEvents.filter(event => {
+      return event.series.id === id;
+    })
 
     console.log('series as brought in: ', series)
+    console.log('events as brought in: ', events)
 
-    this.setState({series});
+    this.setState({ series, events });
   }
 
   render() {
@@ -50,7 +64,7 @@ class Home extends React.Component {
           <HeroTitle/>
           <Stripe/>
 
-          <DraftProgressDisplay draft_order_props={this.state.series}/>
+          <DraftProgressDisplay props={this.state}/>
 
           <Stripe/>
           <TicketTable participants={this.state.series.participants}/>
