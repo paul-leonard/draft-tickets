@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import HeroTitle from '../components/HeroTitle'
 import Stripe from '../components/Stripe'
 import styles from '../styles/Home.module.css'
-import { getEventData, getSeriesData } from '../services/data-fetcher'
+import { getEventData, getSeriesData, getUser } from '../services/data-fetcher'
 import { withRouter } from 'next/router'
 
 
@@ -25,12 +25,8 @@ class Home extends React.Component {
         round: 1,
         pick: 1,
       },
-      events: []
-      // {
-      //   id: 0,
-      //   description: "",
-      //   host: "",
-      // }
+      events: [],
+      logged_in_user: 0
     }
   }
 
@@ -41,6 +37,8 @@ class Home extends React.Component {
     
     const AllEvents = await getEventData();
 
+    const logged_in_user = await getUser();
+
     const events = AllEvents.filter(event => {
       return event.series.id === id;
     })
@@ -48,7 +46,7 @@ class Home extends React.Component {
     console.log('series as brought in: ', series)
     console.log('events as brought in: ', events)
 
-    this.setState({ series, events });
+    this.setState({ series, events, logged_in_user });
   }
 
   render() {

@@ -53,6 +53,13 @@ export async function getEventData(id=null) {
 }
 
 
+export async function getUser(id=null) {
+  let data = await getResourceData('self');
+  console.log("The API returned user logged in ID is: ",data[0].id);
+  return data[0].id
+}
+
+
 async function getResourceData(type, id=null) {
   const JWTToken = await fetchAccessToken();
 
