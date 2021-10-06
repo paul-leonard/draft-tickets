@@ -19,10 +19,9 @@ export default function TicketTable ({props}) {
         ))}
       </div>
       <div>
-        <GameRow/>
-        <GameRow/>
-        <GameRow/>
-        <GameRow/>
+        {props.events.map((event,i) => (
+          <GameRow key={i} event={event} index={i+1}/>
+        ))}
       </div>
     </>
   )
