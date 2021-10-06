@@ -67,7 +67,7 @@ class Home extends React.Component {
           <DraftProgressDisplay props={this.state}/>
 
           <Stripe/>
-          <TicketTable participants={this.state.series.participants}/>
+          <TicketTable props={this.state}/>
         </main>
 
         <Footer/>
