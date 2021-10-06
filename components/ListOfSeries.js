@@ -13,8 +13,6 @@ class ListOfSeries extends React.Component {
     render() {
         return (
             <>
-            <div>
-
                 {this.props.seriesData.length ?
                     <ul>
                         {this.props.seriesData.map(series => (
@@ -27,7 +25,6 @@ class ListOfSeries extends React.Component {
                     </ul>
 
                     : <h2>Sadly, you currently are not a part of any series.</h2>}
-            </div>
             </>
         )
     }

@@ -56,12 +56,10 @@ export async function getEventData(id=null) {
 async function getResourceData(type, id=null) {
   const JWTToken = await fetchAccessToken();
 
-  // attempting to get working with series API call first, then abstract
-  // let url = 'http://get-kraken.herokuapp.com/api/v1/${type}/';
-  let url = 'http://get-kraken.herokuapp.com/api/v1/series/';
+  let url = `http://get-kraken.herokuapp.com/api/v1/${type}/`;
 
   if(id != null) {
-    url += '${id}j/';
+    url += `${id}/`;
   }
 
   console.log('resource API url: ', url);

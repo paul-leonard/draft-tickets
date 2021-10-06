@@ -122,3 +122,4 @@ https://trello.com/b/g5bLMfQS/kraken-draft-agile-board
 - [Setup JWT for a React Django app in minutes](https://www.devoreur2code.com/setup-jwt-react-django-app)
 - [wait for component to mount before using localStorage](https://stackoverflow.com/questions/59540321/in-reactjs-and-nextjs-constructor-getting-reference-error-localstorage-is-not-d)
 - [Authentication with Django and Next.js](https://jeff.roche.cool/posts/django-next-auth/)
+- [routing](https://nextjs.org/docs/routing/introduction)
