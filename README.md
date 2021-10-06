@@ -120,4 +120,5 @@ https://trello.com/b/g5bLMfQS/kraken-draft-agile-board
 - Red Ticket Image by [Clker-Free-Vector-Images](https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311560) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=311560)
 - [multiple API calls within getStaticProps](https://github.com/vercel/next.js/discussions/22518)
 - [Setup JWT for a React Django app in minutes](https://www.devoreur2code.com/setup-jwt-react-django-app)
+- [wait for component to mount before using localStorage](https://stackoverflow.com/questions/59540321/in-reactjs-and-nextjs-constructor-getting-reference-error-localstorage-is-not-d)
 - [Authentication with Django and Next.js](https://jeff.roche.cool/posts/django-next-auth/)
