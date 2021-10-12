@@ -63,7 +63,7 @@ export async function getUser(id=null) {
 async function getResourceData(type, id=null) {
   const JWTToken = await fetchAccessToken();
 
-  let url = `http://get-kraken.herokuapp.com/api/v1/${type}/`;
+  let url = `https://get-kraken.herokuapp.com/api/v1/${type}/`;
 
   if(id != null) {
     url += `${id}/`;
@@ -87,9 +87,9 @@ export async function claimGame(game_id) {
   const JWTToken = await fetchAccessToken();
   // console.log('resource API url: completed token fetch');
 
-  // let url = `http://get-kraken.herokuapp.com/api/v1/event/<int:pk>/host/`;
-  // let url = `http://get-kraken.herokuapp.com/api/v1/event/${game_id}/host/`;
-  let url = `http://get-kraken.herokuapp.com/api/v1/event/27/host/`;
+  // let url = `https://get-kraken.herokuapp.com/api/v1/event/<int:pk>/host/`;
+  // let url = `https://get-kraken.herokuapp.com/api/v1/event/${game_id}/host/`;
+  let url = `https://get-kraken.herokuapp.com/api/v1/event/27/host/`;
 
   // console.log('resource API url using to claim: ', url);
 

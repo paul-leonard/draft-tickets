@@ -79,7 +79,7 @@ export function DraftRow ({order_and_pick}) {
   return (
     <>  
       {order_and_pick.draft_order_names[order_and_pick.row-1].map((turn, i) => {
-        if (order_and_pick.row === order_and_pick.round && order_and_pick.pick == i+1) {
+        if (turn && order_and_pick.row === order_and_pick.round && order_and_pick.pick == i+1) {
           return (
             <div key={i} className={styles.cardsturn}>
               <h4>{turn}&apos;s Turn</h4>

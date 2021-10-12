@@ -49,6 +49,27 @@
   font-size: .8rem;
 }
 
+.gamecard h3 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.gamecard h4 {
+  font-size: .8rem;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.gamecard p {
+  margin: 3px;
+  font-size: 0.7rem;
+}
+
+.gamecard>p {
+  margin-top: 6px;
+  font-size: 0.4rem;
+}
+
 .card p {
   margin: 0;
   font-size: 0.5rem;
