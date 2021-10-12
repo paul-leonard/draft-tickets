@@ -76,6 +76,11 @@
   line-height: 1.5;
 }
 
+
+.rotatetix {
+  transform: rotate(-30deg);
+}
+
 .card:hover,
 .card:focus,
 .card:active,

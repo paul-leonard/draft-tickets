@@ -6,7 +6,9 @@ import claimGame from '../services/data-fetcher.js'
 export function TicketPickCard () {
   return (
     <div className={styles.card}>
-      <Image src="/../public/ticket.png" alt="illustration of a ticket" width={60} height={30}/>
+      <div className={styles.rotatetix}>
+        <Image src="/../public/ticket.png" alt="illustration of a ticket" width={60} height={30}/>
+      </div>
     </div>
   )
 }
