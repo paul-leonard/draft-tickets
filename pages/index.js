@@ -10,7 +10,6 @@ import { getEventData, getSeriesData, getUser } from '../services/data-fetcher'
 import { withRouter } from 'next/router'
 
 
-
 class Home extends React.Component {
   
   constructor(props) {

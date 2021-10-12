@@ -125,3 +125,5 @@ https://trello.com/b/g5bLMfQS/kraken-draft-agile-board
 - [routing](https://nextjs.org/docs/routing/introduction)
 - [multi props](https://dmitripavlutin.com/react-props/)
 - [conditional rendering](https://www.digitalocean.com/community/tutorials/7-ways-to-implement-conditional-rendering-in-react-applications)
+- [next-auth example](https://github.com/nextauthjs/next-auth-example)
+- [NextAuth docs](https://next-auth.js.org/)

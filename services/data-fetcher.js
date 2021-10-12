@@ -80,3 +80,23 @@ async function getResourceData(type, id=null) {
     console.error("Failed to fetch series data due to error")
   }
 }
+
+
+export async function claimGame(game_id) {
+  const JWTToken = await fetchAccessToken();
+
+  // let url = `http://get-kraken.herokuapp.com/api/v1/event/<int:pk>/host/`;
+  // let url = `http://get-kraken.herokuapp.com/api/v1/event/${game_id}/host/`;
+  let url = `http://get-kraken.herokuapp.com/api/v1/event/8/host/`;
+
+  console.log('resource API url: ', url);
+
+  let config = { headers: {"Authorization": `Bearer ${JWTToken}` } };
+
+  try {
+    let response = await axios.get(url, config);
+    return response.data;
+  } catch (e) {
+    console.error("Failed to claim the host role due to error.")
+  }
+}
