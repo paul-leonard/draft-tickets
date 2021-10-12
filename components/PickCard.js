@@ -19,18 +19,19 @@ export function BlankPickCard () {
 
 export function ClaimPickCard () {
 
-  // async function processClaim(eventId="all of them!!!") {
-  //   console.log(`Hi, I'd like to claim gameID ${eventId}.`);
-  //   await claimGame(8);
-  // }
+  async function processClaim(eventId="all of them!!!") {
+    console.log(`Hi, I'd like to claim gameID ${eventId}.`);
+    let responsetwo = await claimGame(27);
+    console.log('Response from claim request is: ',responsetwo)
+  }
 
   return (
     // <a href="event/<int:pk>/host/" className={styles.card}>Claim Game</a>
     // <a href="claimGame(8)" className={styles.card}>Claim Game</a>
     <div 
       className={styles.card}
-      onClick={() => claimGame(27)}>
-      {/* onClick={processClaim}> */}
+      // onClick={() => claimGame(27)}>
+      onClick={() => processClaim(27)}>
         Claim Game
     </div>
   )

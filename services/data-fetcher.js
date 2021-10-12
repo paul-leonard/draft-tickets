@@ -83,19 +83,21 @@ async function getResourceData(type, id=null) {
 
 
 export async function claimGame(game_id) {
+  // console.log('resource API url: prepare for token fetch');
   const JWTToken = await fetchAccessToken();
+  // console.log('resource API url: completed token fetch');
 
   // let url = `http://get-kraken.herokuapp.com/api/v1/event/<int:pk>/host/`;
   // let url = `http://get-kraken.herokuapp.com/api/v1/event/${game_id}/host/`;
-  let url = `http://get-kraken.herokuapp.com/api/v1/event/8/host/`;
+  let url = `http://get-kraken.herokuapp.com/api/v1/event/27/host/`;
 
-  console.log('resource API url: ', url);
+  // console.log('resource API url using to claim: ', url);
 
   let config = { headers: {"Authorization": `Bearer ${JWTToken}` } };
 
   try {
-    let response = await axios.get(url, config);
-    return response.data;
+    let response = await axios.put(url, config);
+    return response;
   } catch (e) {
     console.error("Failed to claim the host role due to error.")
   }
