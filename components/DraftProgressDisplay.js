@@ -1,10 +1,10 @@
 import styles from '../styles/DraftProgressDisplay.module.css'
 
-export default function DraftProgressDisplay ({draft_order_props}) {
+export default function DraftProgressDisplay ({props}) {
 
-  let draft_order_names = JSON.parse(draft_order_props.draft_order).draft_order.map(row => row.map(id => {
+  let draft_order_names = JSON.parse(props.series.draft_order).draft_order.map(row => row.map(id => {
     let username = ""
-    draft_order_props.participants.forEach((x,i) => {
+    props.series.participants.forEach((x,i) => {
       if (id === x.id) {
         username = x.username
       }
@@ -14,15 +14,15 @@ export default function DraftProgressDisplay ({draft_order_props}) {
 
   let draft_order_names_and_pick_one = {
     draft_order_names: draft_order_names,
-    pick: draft_order_props.pick,
-    round: draft_order_props.round,
+    pick: props.series.pick,
+    round: props.series.round,
     row: 1
   }
 
   let draft_order_names_and_pick_two = {
     draft_order_names: draft_order_names,
-    pick: draft_order_props.pick,
-    round: draft_order_props.round,
+    pick: props.series.pick,
+    round: props.series.round,
     row: 2
   }
 

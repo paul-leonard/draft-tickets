@@ -1,26 +1,55 @@
 import styles from '../styles/TicketTable.module.css'
+import React from 'react'
 import Image from 'next/image'
+import claimGame from '../services/data-fetcher.js'
 
-export default function PickCard () {
-
-  // const conditional = True
-
+export function TicketPickCard () {
   return (
-    // Conditionally blank, owned tickets image, or claim button:
-
-    // if the column heading person has claimed this game (including unclaimed)
-    // <div className={styles.card}>
-    //   <Image src="/../public/ticket.png" alt="illustration of a ticket" width={60} height={30}/>
-    // </div>
-    
-    // else if unclaimed game and it is the user's turn to pick
-    <a href="conditional_link_to_api_to_claim" className={styles.card}>Claim Game</a>
-    
-    // else
-    // <div className={styles.card}/>
-
-    
-
-
+    <div className={styles.card}>
+      <Image src="/../public/ticket.png" alt="illustration of a ticket" width={60} height={30}/>
+    </div>
   )
 }
+
+export function BlankPickCard () {
+  return (
+    <div className={styles.card}/>
+  )
+}
+
+export function ClaimPickCard () {
+
+  async function processClaim(eventId="all of them!!!") {
+    console.log(`Hi, I'd like to claim gameID ${eventId}.`);
+    let responsetwo = await claimGame(27);
+    console.log('Response from claim request is: ',responsetwo)
+  }
+
+  return (
+    // <a href="event/<int:pk>/host/" className={styles.card}>Claim Game</a>
+    // <a href="claimGame(8)" className={styles.card}>Claim Game</a>
+    <div 
+      className={styles.card}
+      // onClick={() => claimGame(27)}>
+      onClick={() => processClaim(27)}>
+        Claim Game
+    </div>
+  )
+}
+
+//  class ClaimPickCard extends React.Component {
+//   handleClick = () => 
+
+//   }
+//   return (
+//     // <a href="event/<int:pk>/host/" className={styles.card}>Claim Game</a>
+//     // <a href="claimGame(8)" className={styles.card}>Claim Game</a>
+//     <div 
+//       className={styles.card}
+//       onClick={claimGame(8)}>
+//         Claim Game
+//     </div>
+//   )
+// }
+
+// export ClaimPickCard;
