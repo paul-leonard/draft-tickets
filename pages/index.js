@@ -5,6 +5,7 @@ import TicketTable from '../components/TicketTable'
 import Footer from '../components/Footer'
 import HeroTitle from '../components/HeroTitle'
 import Stripe from '../components/Stripe'
+import LoginForm from '../forms/LoginForm'
 import styles from '../styles/Home.module.css'
 import { getEventData, getSeriesData, getUser } from '../services/data-fetcher'
 import { withRouter } from 'next/router'
@@ -56,13 +57,24 @@ class Home extends React.Component {
         </Head>
 
         <main className={styles.main}>
-          <HeroTitle/>
-          <Stripe/>
 
-          <DraftProgressDisplay props={this.state}/>
 
-          <Stripe/>
-          <TicketTable props={this.state}/>
+          { (this.state.logged_in_user)
+            ? <>
+              <HeroTitle/>
+              <Stripe/>
+              <DraftProgressDisplay props={this.state}/>
+              <Stripe/>
+              <TicketTable props={this.state}/>
+              </>
+            :
+              <>
+                {/* <WelcomeTitle/> */}
+                <Stripe/>
+                <LoginForm/>
+              </>
+          }
+
         </main>
 
         <Footer/>
