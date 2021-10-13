@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import styles from '../styles/Home.module.css';
 import Image from 'next/dist/client/image'; 
 import Stripe from '../components/Stripe';
+import Screenshots from '../components/Screenshots';
 import Head from 'next/head';
 
 
@@ -40,8 +41,9 @@ export default function Welcome() {
           For a high level overview, checkout the summary images below.  To see the app in a little bit of action, login with the username of &apos;krakenfan2&apos; and a password of &apos;uncommon&apos;.  Thanks for checking it out!
         </p>
         <Stripe/>
-        
         <LoginForm/>
+        <Stripe/>
+        <Screenshots/>
       </main>
 
       <Footer/>
