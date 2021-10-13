@@ -57,24 +57,11 @@ class Home extends React.Component {
         </Head>
 
         <main className={styles.main}>
-
-
-          { (this.state.logged_in_user)
-            ? <>
-              <HeroTitle/>
-              <Stripe/>
-              <DraftProgressDisplay props={this.state}/>
-              <Stripe/>
-              <TicketTable props={this.state}/>
-              </>
-            :
-              <>
-                {/* <WelcomeTitle/> */}
-                <Stripe/>
-                <LoginForm/>
-              </>
-          }
-
+          <HeroTitle/>
+          <Stripe/>
+          <DraftProgressDisplay props={this.state}/>
+          <Stripe/>
+          <TicketTable props={this.state}/>
         </main>
 
         <Footer/>

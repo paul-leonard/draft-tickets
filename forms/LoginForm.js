@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
     localStorage.setItem('draft-refresh-token', response.data.refresh);
     localStorage.setItem('raw-response', JSON.stringify(response.data));
 
-    Router.push('https://localhost:3000/');
+    Router.push('http://localhost:3000/');
     // Router.push('https://draft-tickets.vercel.app/');
   }
 
