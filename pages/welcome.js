@@ -37,7 +37,7 @@ export default function Welcome() {
           Designing the app was a good lesson in many technologies.  The frontend was developed with the React Next.js framework and hosted on Vercel.  The RESTful API is a Dockerized Django backend hosted on Heroku supported by postgreSQL database at ElephantSQL.
         </p>
         <p className={styles.description}>
-          For a high level overview, checkout the summary images below.  To see the app in a little bit of action, login with the username of `&apos;`krakenfan2`&apos;` and a password of `&apos;`uncommon`&apos;`.  Thanks for checking it out!
+          For a high level overview, checkout the summary images below.  To see the app in a little bit of action, login with the username of &apos;krakenfan2&apos; and a password of &apos;uncommon&apos;.  Thanks for checking it out!
         </p>
         <Stripe/>
         
