@@ -5,6 +5,7 @@ export default function TicketTable ({props}) {
 
   const draft_array = JSON.parse(props.series.draft_order).draft_order
   const whose_turn = draft_array[props.series.round-1][props.series.pick-1]
+  props.events.sort((a,b) => (a.id > b.id) ? 1 : -1)
 
   return (
     <>  
@@ -22,7 +23,7 @@ export default function TicketTable ({props}) {
             </div>
         ))}
       </div>
-      <div>
+      <div>        
         {props.events.map((event,i) => (
           <GameRow key={i} event={event} index={i+1} props={props} whose_turn={whose_turn}/>
         ))}

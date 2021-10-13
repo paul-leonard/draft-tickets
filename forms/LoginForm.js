@@ -54,7 +54,8 @@ class LoginForm extends React.Component {
     localStorage.setItem('draft-refresh-token', response.data.refresh);
     localStorage.setItem('raw-response', JSON.stringify(response.data));
 
-    Router.push('http://localhost:3000/printresponse');
+    // Router.push('http://localhost:3000/');
+    Router.push('https://draft-tickets.vercel.app/');
   }
 
   render() {
@@ -64,14 +65,14 @@ class LoginForm extends React.Component {
 
         <InputField
           type = 'text'
-          placeholder = 'username'
+          placeholder = 'username: krakenfan2'
           value = {this.state.username ? this.state.username : ''}
           onChange = {(val) => this.setInputValue('username',val)}
         />
 
         <InputField
           type = 'password'
-          placeholder = 'password'
+          placeholder = 'password: uncommon'
           value = {this.state.password ? this.state.password : ''}
           onChange = {(val) => this.setInputValue('password',val)}
         />

@@ -1,3 +1,49 @@
+.description {
+  line-height: 1.5;
+  font-size: .8rem;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.side_by_side {
+  display: grid;
+  grid-template-columns: 20px 1fr 40px 1fr 20px;
+  grid-template-rows: 2;
+  justify-items: center;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.side_by_side h2 {
+  grid-row: 1/2;
+  grid-column: 2/5;
+  margin: 0 0 0 0;
+}
+
+.sum_and_pic_container_a {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: start;
+  text-align: center;
+}
+
+.sum_and_pic_container_b {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: start;
+  text-align: center;
+}
+
+.sum_and_pic_container_a p, .sum_and_pic_container_b p {
+  min-height: 100px;
+}
+
+/* .sum_and_pic_container_a img {
+  border: 5px solid red;
+} */
+
 .grid {
   display: flex;
   align-items: center;
@@ -50,56 +96,4 @@
 .gamecard h3 {
   font-size: 1rem;
   margin-bottom: 2px;
-}
-
-.gamecard h4 {
-  font-size: .8rem;
-  margin-bottom: 0px;
-  margin-top: 10px;
-}
-
-.gamecard p {
-  margin: 3px;
-  font-size: 0.7rem;
-}
-
-.gamecard>p {
-  margin-top: 6px;
-  font-size: 0.4rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 0.5rem;
-  line-height: 1.5;
-}
-
-.rotatetix {
-  transform: rotate(-30deg);
-}
-
-.card:hover,
-.card:focus,
-.card:active,
-.gamecard:hover,
-.gamecard:focus,
-.gamecard:active {
-  color: #99d9d9;
-  border-color: #99d9d9;
-  background-color: #e9072b;
-}
-
-.title {
-  text-align: center;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
 }
