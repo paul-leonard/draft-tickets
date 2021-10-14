@@ -3,7 +3,7 @@ import SubmitButton from "../components/SubmitButton";
 import Router from 'next/router';
 import axios from "axios";
 import InputField from "../components/InputField";
-import styles from '../styles/Home.module.css'
+import styles from '../styles/LoginForm.module.css'
 
 
 class LoginForm extends React.Component {
@@ -63,7 +63,7 @@ class LoginForm extends React.Component {
   render() {
     return(
       <div className={styles.login_block}>
-        <h1>Log In</h1>
+        <h2>Log In</h2>
 
         <InputField
           type = 'text'

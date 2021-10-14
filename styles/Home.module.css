@@ -58,11 +58,6 @@
   padding-right: 10px;
 }
 
-.login_block {
-  grid-column: 3/4;
-
-}
-
 .welcome_msg {
   line-height: 1.5;
   font-size: .8rem;

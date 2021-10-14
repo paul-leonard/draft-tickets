@@ -1,0 +1,19 @@
+.login_block {
+  grid-column: 3/4;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.login_block * {
+  justify-self: center;
+  align-self: center;
+}
+
+.login_block h2 {
+  margin: 0 0 20px 0
+}
+
+.login_block button {
+  margin: 20px 0 0 0
+}
