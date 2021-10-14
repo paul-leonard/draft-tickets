@@ -15,5 +15,23 @@
 }
 
 .login_block button {
-  margin: 20px 0 0 0
+  margin: 20px 0 20px 0;
+  border-radius: 10px;
+  background-color: #99d9d9;
+}
+
+.login_block input {
+  margin: 5px;
+  border-radius: 2px;
+  border: 2px solid;
+  width:175px;
+  padding: 3px;
+}
+
+.login_block button:hover,
+.login_block button:focus,
+.login_block button:active {
+  color: #99d9d9;
+  border-color: #99d9d9;
+  background-color: #e9072b;
 }
