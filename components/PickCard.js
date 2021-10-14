@@ -7,7 +7,7 @@ export function TicketPickCard () {
   return (
     <div className={styles.card}>
       <div className={styles.rotatetix}>
-        <Image src="/../public/ticket.png" alt="illustration of a ticket" width={60} height={30}/>
+        <Image src="/public/ticket.png" alt="illustration of a ticket" width={60} height={30}/>
       </div>
     </div>
   )
