@@ -1,8 +1,8 @@
 .description {
   line-height: 1.5;
-  font-size: .8rem;
-  padding-left: 40px;
-  padding-right: 40px;
+  font-size: .9rem;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .side_by_side {
@@ -37,7 +37,7 @@
 }
 
 .sum_and_pic_container_a p, .sum_and_pic_container_b p {
-  min-height: 100px;
+  min-height: 120px;
 }
 
 /* .sum_and_pic_container_a img {

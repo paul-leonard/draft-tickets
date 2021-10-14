@@ -38,8 +38,18 @@
 .description {
   line-height: 1.5;
   font-size: .8rem;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 200px;
+  padding-right: 200px;
+  /* max-width: 600px; */
+  /* text-align: center; */
+}
+
+.desc_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
 }
 
 .grid {
@@ -75,4 +85,9 @@
     width: 100%;
     flex-direction: column;
   }
+
+  .description {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 }
