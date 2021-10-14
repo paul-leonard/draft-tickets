@@ -28,21 +28,24 @@ export default function Welcome() {
         </div>
 
         <Stripe/>
-        <p className={styles.description}>
-          Welcome to the Season Ticket Drafting Tool!  I designed this web app to help some friends and me draft games to our shared two season ticket seats for the inaugural season of the Seattle Kraken! 
-        </p>
-        <p className={styles.description}>          
-          The app provides a randomized and fair way to distribute a limited resource using a web-based draft.  Each season ticket member has their own login which customizes their views of information and limits their actions through authentication.
-        </p>
-        <p className={styles.description}>
-          Designing the app was a good lesson in many technologies.  The frontend was developed with the React Next.js framework and hosted on Vercel.  The RESTful API is a Dockerized Django backend hosted on Heroku supported by postgreSQL database at ElephantSQL.
-        </p>
-        <p className={styles.description}>
-          For a high level overview, checkout the summary images below.  To see the app in a little bit of action, login with the username of &apos;krakenfan2&apos; and a password of &apos;uncommon&apos;.  Thanks for checking it out!
-        </p>
-        <Stripe/>
-        <LoginForm/>
-        <Stripe/>
+        <div className={styles.welcome_login_container}>
+          <div className={styles.desc_container}>
+            <p className={styles.welcome_msg}>
+              Welcome to the Season Ticket Drafting Tool!  I designed this web app to help some   friends   and me draft games to our shared two season ticket seats for the inaugural  season of the  Seattle Kraken! 
+            </p>
+            <p className={styles.welcome_msg}>          
+              The app provides a randomized and fair way to distribute a limited resource using a     web-based draft.  Each season ticket member has their own login which customizes their  views  of information and limits their actions through authentication.
+            </p>
+            <p className={styles.welcome_msg}>
+              Designing the app was a good lesson in many technologies.  The frontend was developed   with  the React Next.js framework and hosted on Vercel.  The RESTful API is a Dockerized  Django  backend hosted on Heroku supported by postgreSQL database at ElephantSQL.
+            </p>
+            <p className={styles.welcome_msg}>
+              For a high level overview, checkout the summary images below.  To see the app in a  little   bit of action, login with the username of &apos;krakenfan2&apos; and a password   of &apos; uncommon&apos;.  Thanks for checking it out!
+            </p>
+          </div>
+          <LoginForm/>
+          </div>
+          <Stripe/>
         <Screenshots/>
       </main>
 

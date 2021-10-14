@@ -52,6 +52,26 @@
   align-content: center;
 }
 
+.welcome_login_container .desc_container {
+  grid-column: 2/3;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.welcome_msg {
+  line-height: 1.5;
+  font-size: .8rem;
+  max-width: 525px;
+  margin-top: 0px;
+}
+
+.welcome_login_container {
+  display: grid;
+  grid-template-columns: 50px 70% 30% 50px;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
 .grid {
   display: flex;
   align-items: center;
