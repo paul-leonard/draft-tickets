@@ -1,8 +1,10 @@
 .login_block {
   grid-column: 3/4;
   display: grid;
-  justify-content: center;
+  justify-content: start;
   align-content: center;
+  justify-self: start;
+
 }
 
 .login_block * {

@@ -54,8 +54,9 @@
 
 .welcome_login_container .desc_container {
   grid-column: 2/3;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  justify-self: end;
 }
 
 .welcome_msg {
@@ -63,13 +64,26 @@
   font-size: .8rem;
   max-width: 525px;
   margin-top: 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.welcome_msg p {
+  justify-self: end;
+}
+
+.center_welcome_login_container {
+  display: grid;
+  grid-template-columns: 1;
 }
 
 .welcome_login_container {
   display: grid;
   grid-template-columns: 50px 70% 30% 50px;
   justify-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  justify-self: center;
+
 }
 
 .grid {
